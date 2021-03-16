@@ -234,5 +234,81 @@
   
 ## Ex08.c
 
+    #include <stdio.h>
+    int main()
+    {
+    int arr1[100], n,ctr=0;
+    int i, j, k;
+       	
+       printf("Input the number of elements to be stored in the array: ");
+       scanf("%d",&n);
+       printf("Input %d elements in the array :\n",n);
+       for(i=0;i<n;i++)
+            {
+	      printf("element - %d : ",i);
+	      scanf("%d",&arr1[i]);
+	    }
+    printf("\nThe unique elements found in the array are: \n");
+    for(i=0; i<n; i++)
+    {
+        ctr=0;
+        for(j=0,k=n; j<k+1; j++)
+        {
+      
+            if (i!=j)
+            {
+		       if(arr1[i]==arr1[j])
+              {
+                 ctr++;
+               }
+             }
+        }
+       if(ctr==0)
+        {
+          printf("%d ",arr1[i]);
+        }
+    }
+       printf("\n\n");
+    }
+    
 ## Ex08.py
+
+    def unique_list(l):
+    x = []
+    for a in l:
+    if a not in x:
+      x.append(a)
+    return x
+
+    print(unique_list([1, 2, 3, 4, 5, 5, 14])) 
+    
+ ## Ex09.c
+ 
+     #include <stdio.h>
+     int main() {
+      int n, i, flag = 0;
+      printf("Enter a positive integer: ");
+      scanf("%d", &n);
+
+      for (i = 2; i <= n / 2; ++i) {
+      if (n % i == 0) {
+      flag = 1;
+      break;
+     }
+     }
+
+    if (n == 1) {
+    printf("1 is neither prime nor composite.");
+  } 
+         else {
+           if (flag == 0)
+        printf("%d is a prime number.", n);
+            else
+      printf("%d is not a prime number.", n);
+    }
+
+     return 0;
+     }
+ ## Ex09.py
+
   
