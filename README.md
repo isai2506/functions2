@@ -26,7 +26,7 @@
      return max_of_two( x, max_of_two( y, z ) )
     print(max_of_three(1, 2, 3))
     
- ## Ex02.C
+ ## Ex02.c
  
      #include <stdio.h>
      
@@ -59,3 +59,31 @@
         total += x
     return total
     print(sum((5, -2, 4, 6, 2, 4)))
+    
+ ## Ex03.c
+ 
+    #include <stdio.h>
+
+    char line[100];
+    int n1; 
+    int n2; 
+    int m; 
+    int main()
+    {
+    printf("Enter 2 numbers ");
+    fgets(line, sizeof(line), stdin);
+    sscanf(line, "%d %d", &n1, &n2);
+    sscanf(line, "%d %d", &n1, &n2);
+     m = (n1 * n2);
+     printf("The multiplication of the numbers is %d\n", m);
+    return (0);
+    }
+     
+ ## Ex03.py
+ 
+    def multiply(numbers):  
+     total = 1
+    for x in numbers:
+        total *= x  
+    return total  
+    print(multiply((4, 5, 2, 4)))
