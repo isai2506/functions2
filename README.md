@@ -181,7 +181,7 @@
     return 0;
    }
    
- ## Ex06.py
+## Ex06.py
  
     def test_range(n):
     if n in range(6,12):
@@ -190,4 +190,49 @@
         print("The number is outside the given range.")
     test_range(8)
   
+ ## Ex07.c
+
+    #include <stdio.h>
+    #include <stdlib.h>
+    int main()
+    {
+    int i;
+    int upper=0,lower=0;
+    char ch[100];
+    printf("Enter the String:\n");
+    gets(ch);
+    for(i=0; ch[i]!=0; i++){
+      if(ch[i]>='A' && ch[i]<='Z'){
+       upper++;
+     }
+      else if(ch[i]>='a' && ch[i]<='z'){
+      lower++;
+     }
+     }
+    printf("lowercase letters: %d",lower);
+    printf("\nuppercase letters: %d",upper);
+
+    return 0;
+    }
+    
+## Ex07.py
+
+    def string_test(s):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in s:
+        if c.isupper():
+           d["UPPER_CASE"]+=1
+        elif c.islower():
+           d["LOWER_CASE"]+=1
+        else:
+           pass
+    print ("Original String : ", s)
+    print ("No. of Upper case characters : ", d["UPPER_CASE"])
+    print ("No. of Lower case Characters : ", d["LOWER_CASE"])
+
+    string_test('I Have Many HW')
+  
+## Ex08.c
+
+## Ex08.py
   
