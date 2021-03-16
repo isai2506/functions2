@@ -160,3 +160,34 @@
         return n * factorial(n-1)
     n=int(input("Input a number to compute the factiorial : "))
     print(factorial(n))
+    
+## Ex06.c
+
+    #include<stdio.h>
+ 
+    int main() {
+    int num, min, max;
+     
+    printf("Enter an integer\n");
+    scanf("%d", &num);
+    printf("Enter the minimum and maximum range\n");
+    scanf("%d %d", &min, &max);
+     
+    if((num-min)*(num-max) <= 0){
+        printf("%d is in range of [%d, %d]", num, min, max);
+    } else {
+     printf("%d is not in range of [%d, %d]", num, min, max);
+    }
+    return 0;
+   }
+   
+ ## Ex06.py
+ 
+    def test_range(n):
+    if n in range(6,12):
+        print( " %s is in the range"%str(n))
+    else :
+        print("The number is outside the given range.")
+    test_range(8)
+  
+  
