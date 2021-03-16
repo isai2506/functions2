@@ -398,4 +398,40 @@
     
  ## Ex12.c
  
+    #include <string.h>
+    #include <stdio.h>
+
+    int main()
+    {
+    char s[1000];  
+    int i,n,c=0;
+
+      printf("Enter  the string : ");
+      gets(s);
+      n=strlen(s);
+
+     for(i=0;i<n/2;i++)  
+     {
+	if(s[i]==s[n-i-1])
+	c++;
+    }
+    if(c==i)
+     printf(" is palindrome");
+     else
+     printf(" is not palindrome");
+    return 0;
+    }
+    
  ## Ex12.py
+
+     def isPalindrome(string):
+	left_pos = 0
+	right_pos = len(string) - 1
+	
+	while right_pos >= left_pos:
+		if not string[left_pos] == string[right_pos]:
+			return False
+		left_pos += 1
+		right_pos -= 1
+	return True
+     print(isPalindrome('arroz zorra')) 
