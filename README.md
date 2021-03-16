@@ -282,7 +282,7 @@
 
     print(unique_list([1, 2, 3, 4, 5, 5, 14])) 
     
- ## Ex09.c
+## Ex09.c
  
      #include <stdio.h>
      int main() {
@@ -299,7 +299,7 @@
 
     if (n == 1) {
     printf("1 is neither prime nor composite.");
-  } 
+     } 
          else {
            if (flag == 0)
         printf("%d is a prime number.", n);
@@ -308,7 +308,94 @@
     }
 
      return 0;
-     }
- ## Ex09.py
+     } 
+     
+## Ex09.py
+    def test_prime(n):
+    if (n==1):
+        return False
+    elif (n==2):
+        return True;
+    else:
+        for x in range(2,n):
+            if(n % x==0):
+                return False
+        return True             
+    print(test_prime(2))
+    
+ ## Ex10.c
+ 
+     #include<stdio.h>
+    int main()
+    {
+     int n, a[20];
 
-  
+     printf("Enter the size of the array: ");
+     scanf("%d", &n);
+
+     printf("Enter array elements: \n");
+    for(int i=0; i<n; i++)
+    {
+      scanf("%d",&a[i]);
+    }
+
+      printf("Even numbers in the array are: \n");
+     for(int i=0; i<n; i++)
+     {
+     if(a[i]%2==0)
+     printf("%d ", a[i]);
+     }
+       return 0;
+     }
+     
+ ## Ex10.py
+ 
+    def is_even_num(l):
+      enum = []
+       for n in l:
+        if n % 2 == 0:
+            enum.append(n)
+    return enum
+    print(is_even_num([2, 4, 6, 8, 6, 5]))
+    
+ ## Ex11.c
+ 
+    #include <stdio.h>
+ 
+    int main()
+    {
+    int num,loop;
+    int sum;
+ 
+    printf("Enter an integer number: ");
+    scanf("%d",&num);
+ 
+    sum=0;
+ 
+    for(loop=1; loop<num;loop++)
+    {
+        if(num%loop==0)
+            sum+=loop;
+    }
+ 
+    if(sum==num)
+        printf(	"TRUE");
+    else
+        printf("FALSE");
+ 
+    return 0;
+    }
+    
+ ## Ex11.py
+ 
+    def perfect_number(n):
+    sum = 0
+    for x in range(1, n):
+        if n % x == 0:
+            sum += x
+    return sum == n
+    print(perfect_number(8))
+    
+ ## Ex12.c
+ 
+ ## Ex12.py
